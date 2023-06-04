@@ -4,7 +4,7 @@ import urllib
 
 
 #Welcome
-st.image("PortfolioFlashLogo.png")
+# st.image("PortfolioFlashLogo.png")
 st.title("Welcome to Portfolio Flash!")
 st.header("Here, you can build custom portfolios in a flash.")
 st.write(" ")
