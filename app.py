@@ -153,10 +153,8 @@ bgcolor = st.selectbox("What background color would you like to use?", ("Black",
 def getBGColor():
     return bgcolor
 
-doc.getPDF()
-
 #Button to pdf
 def goToPDF():
-    return urllib.urlopen("file:///C:/Users/admin/OneDrive/Downloads/MyPortfolio.pdf")
+    return urllib.urlopen("MyPortfolio.pdf")
 if st.button('Generate PDF Portfolio!'):
     goToPDF()
