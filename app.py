@@ -1,6 +1,6 @@
 import streamlit as st
 import urllib
-import pdf.py as doc
+# import pdf.py as doc
 
 
 #Welcome
@@ -153,8 +153,8 @@ bgcolor = st.selectbox("What background color would you like to use?", ("Black",
 def getBGColor():
     return bgcolor
 
-#Button to pdf
-def goToPDF():
-    return urllib.urlopen("MyPortfolio.pdf")
-if st.button('Generate PDF Portfolio!'):
-    goToPDF()
+# #Button to pdf
+# def goToPDF():
+#     return urllib.urlopen("MyPortfolio.pdf")
+# if st.button('Generate PDF Portfolio!'):
+#     goToPDF()
