@@ -1,5 +1,5 @@
 import streamlit as st
-from flask import Flask, redirect
+import urllib
 
 #Welcome
 st.title("Welcome to Portfolio Flash!")
@@ -153,6 +153,6 @@ def getBGColor():
 
 #Button to pdf
 def goToPDF():
-    return redirect("file:///C:/Users/admin/OneDrive/Downloads/MyPortfolio.pdf")
+    return urllib.urlopen("file:///C:/Users/admin/OneDrive/Downloads/MyPortfolio.pdf")
 if st.button('Generate PDF Portfolio!'):
     goToPDF()
