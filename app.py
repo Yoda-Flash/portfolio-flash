@@ -1,6 +1,7 @@
 import streamlit as st
 import urllib
 import pdf.py as doc
+from fpdf import FPDF
 
 #Welcome
 st.title("Welcome to Portfolio Flash!")
