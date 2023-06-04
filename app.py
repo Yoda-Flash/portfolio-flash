@@ -152,6 +152,6 @@ def getBGColor():
 
 #Button to pdf
 def goToPDF():
-    return redirect("file:///C:/Users/admin/OneDrive/Downloads/My Portfolio.pdf")
+    return redirect("file:///C:/Users/admin/OneDrive/Downloads/MyPortfolio.pdf")
 if st.button('Generate PDF Portfolio!'):
     goToPDF()
