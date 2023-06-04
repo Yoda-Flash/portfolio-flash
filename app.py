@@ -4,10 +4,11 @@ import urllib
 
 
 #Welcome
+st.image("PortfolioFlashLogo.png")
 st.title("Welcome to Portfolio Flash!")
 st.header("Here, you can build custom portfolios in a flash.")
 st.write(" ")
-st.markdown("*Please format all information the way you would on your actual resume, and leave a space behind each punctuation.")
+st.markdown("*Please format all information the way you would on any portfolio, and leave a space behind each punctuation.")
 st.write(" ")
 
 #Contact info
