@@ -101,4 +101,5 @@ pdf.write(5, app.getVolunteer())
 #Professional testimonials and references
 pdf.write(5, app.getReferences())
 
-pdf.output('MyPortfolio.pdf', "file:///C:/Users/admin/OneDrive/Downloads")
+def getPDF():
+    return pdf.output('MyPortfolio.pdf', "file:///C:/Users/admin/OneDrive/Downloads")
