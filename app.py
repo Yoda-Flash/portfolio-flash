@@ -1,5 +1,5 @@
 import streamlit as st
-from flask import Flask, render_template, request, redirect
+from flask import Flask, redirect
 
 #Welcome
 st.title("Welcome to Portfolio Flash!")
