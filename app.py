@@ -1,5 +1,6 @@
 import streamlit as st
 import urllib
+import pdf.py as pdf
 
 #Welcome
 st.title("Welcome to Portfolio Flash!")
@@ -153,6 +154,6 @@ def getBGColor():
 
 #Button to pdf
 def goToPDF():
-    return urllib.urlopen("file:///C:/Users/admin/OneDrive/Downloads/MyPortfolio.pdf")
+    return urllib.urlopen(pdf.getPDF())
 if st.button('Generate PDF Portfolio!'):
     goToPDF()
