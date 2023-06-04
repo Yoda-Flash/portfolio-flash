@@ -1,6 +1,6 @@
 import streamlit as st
 import urllib
-import pdf.py as doc
+# import pdf.py as doc
 
 
 #Welcome
