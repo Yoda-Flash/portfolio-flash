@@ -1,6 +1,6 @@
-from fpdf import FPDF
 import streamlit as st
 import urllib
+import pdf.py as doc
 
 
 #Welcome
@@ -153,109 +153,7 @@ bgcolor = st.selectbox("What background color would you like to use?", ("Black",
 def getBGColor():
     return bgcolor
 
-#Generate PDF
-pdf = FPDF(orientation = 'P', unit = 'mm', format = 'A4')
-pdf.add_page()
-if getBGColor() == "Black":
-    r = 0
-    g = 0
-    b = 0
-    theme = "dark"
-elif getBGColor() == "White":
-    r = 255
-    g = 255
-    b = 255
-    theme = "light"
-elif getBGColor()== "Dark blue":
-    r = 2
-    g = 8
-    b = 74
-    theme = "dark"
-elif getBGColor() == "Light blue":
-    r = 136
-    g = 198
-    b = 252
-    theme = "light"
-elif getBGColor() == "Dark green":
-    r = 1
-    g = 54
-    b = 2
-    theme = "dark"
-elif getBGColor() == "Light green":
-    r = 203
-    g = 247
-    b = 204
-    theme = "light"
-elif getBGColor() == "Dark purple":
-    r = 26
-    g = 1
-    b = 69
-    theme = "dark"
-elif getBGColor() == "Light purple":
-    r = 212
-    g = 190
-    b = 250
-    theme = "light"
-
-pdf.set_fill_color(r, g, b)
-pdf.set_font(getFont(), "B")
-if theme == "dark":
-    pdf.set_text_color(255, 255, 255)
-else:
-    pdf.set_text_color(0, 0, 0)
-
-#Contact info
-pdf.write(5, getFirstName() + getLastName())
-pdf.write(5, getEmail())
-pdf.write(5, getCity() + " ," + getState())
-
-#Career summary
-pdf.write(5, getRelevantWorkExperience())
-pdf.write(5, getSkillSummary())
-pdf.write(5,getProfAccompSummary())
-
-#Mission statement
-pdf.write(5, getWhatYouDo())
-pdf.write(5, getProfessionImportance())
-pdf.write(5, getThriveSkills())
-pdf.write(5, getDifferenceFromOthers())
-
-#Biography
-pdf.write(5, getBiography())
-
-#Resume
-pdf.write(5, getObjective())
-pdf.write(5, getWorkExperience())
-pdf.write(5, getSkills())
-pdf.write(5, getEducation())
-
-#Marketable skills
-pdf.write(5, getHardSkills())
-pdf.write(5, getSoftSkills())
-
-#Professional accomplishments
-pdf.write(5, getAccomp())
-
-#Work samples
-pdf.write(5, getSamples())
-
-#Awards
-pdf.write(5, getAwards())
-
-#Transcripts...
-pdf.write(5, getTranscripts())
-
-#Professional development
-pdf.write(5, getProfDev())
-
-#Volunteer experience
-pdf.write(5, getVolunteer())
-
-#Professional testimonials and references
-pdf.write(5, getReferences())
-
-def getPDF():
-    return pdf.output('MyPortfolio.pdf', "file:///C:/Users/admin/OneDrive/Downloads")
+doc.getPDF()
 
 #Button to pdf
 def goToPDF():
