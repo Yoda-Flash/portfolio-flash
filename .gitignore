@@ -24,3 +24,5 @@ yarn-error.log*
 
 # credentials
 .env
+
+frontend/auth0/app.env
